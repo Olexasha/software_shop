@@ -18,7 +18,7 @@ services:
 
   migrations:
     build: .
-    container_name: migrationsТариф на день
+    container_name: migrations
     depends_on:
       postgres:
         condition: service_healthy
