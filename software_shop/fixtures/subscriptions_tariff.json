@@ -1,0 +1,46 @@
+[
+  {
+    "model": "subscriptions.tariff",
+    "pk": 1,
+    "fields": {
+      "name": "Тариф на день",
+      "price": "49.00",
+      "description": "Подписка на один день с базовым доступом.",
+      "is_active": true,
+      "duration": 1
+    }
+  },
+  {
+    "model": "subscriptions.tariff",
+    "pk": 2,
+    "fields": {
+      "name": "Тариф на неделю",
+      "price": "199.00",
+      "description": "Полный доступ к сервису на неделю.",
+      "is_active": true,
+      "duration": 7
+    }
+  },
+  {
+    "model": "subscriptions.tariff",
+    "pk": 2,
+    "fields": {
+      "name": "Тариф на месяц",
+      "price": "299.00",
+      "description": "Полный доступ к сервису на месяц.",
+      "is_active": true,
+      "duration": 31
+    }
+  },
+  {
+    "model": "subscriptions.tariff",
+    "pk": 3,
+    "fields": {
+      "name": "Годовой тариф",
+      "price": "2490.00",
+      "description": "Экономия при подписке на год.",
+      "is_active": true,
+      "duration": 365
+    }
+  }
+]

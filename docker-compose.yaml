@@ -1,0 +1,106 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "5432:5432"
+    networks:
+      - app_network
+
+  migrations:
+    build: .
+    container_name: migrationsТариф на день
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    command: >
+      sh -c "python manage.py makemigrations && python manage.py migrate"
+    networks:
+      - app_network
+    volumes:
+      - ./:/software_shop
+
+  fixtures:
+    build: .
+    container_name: fixtures
+    depends_on:
+      migrations:
+        condition: service_completed_successfully
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    volumes:
+      - ./:/software_shop
+      - ./software_shop/utils/upload_fixtures.sh:/upload_fixtures.sh
+    entrypoint: [ "bash", "/upload_fixtures.sh" ]
+    networks:
+      - app_network
+
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      - postgres
+      - migrations
+      - fixtures
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+    ports:
+      - "8000:8000"
+    command: ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+    healthcheck:
+      test: curl --fail http://localhost:8000 || exit 1
+      interval: 10s
+      timeout: 10s
+      start_period: 30s
+      retries: 4
+    networks:
+      - app_network
+    volumes:
+      - ./:/software_shop
+
+  tg_bot:
+    build: .
+    container_name: tg_bot
+    depends_on:
+      app:
+        condition: service_healthy
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: postgres
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      TG_BOT_TOKEN: <tg_bot_token>
+      PYTHONPATH: /software_shop:/software_shop/software_shop
+    volumes:
+      - ./:/software_shop
+    command: ["python", "utils/tg_bot/bot.py"]
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

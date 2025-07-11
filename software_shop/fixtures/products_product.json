@@ -1,0 +1,38 @@
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Adobe Premier",
+      "description": "ПО для монтирования видео.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Sony Vegas",
+      "description": "Профессиональное ПО для монтирования видео.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Kaspersky",
+      "description": "Надёжный антивирус для обеспечения безопасности компьютера.",
+      "is_active": true
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Sublime Text Editor",
+      "description": "Удобный и отказоустойчивый текстовый редактор.",
+      "is_active": true
+    }
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "model": "products.productvariant",
+    "pk": 1,
+    "fields": {
+      "product": 1,
+      "version": "basic",
+      "price": "19.99",
+      "features": "Базовые функции монтажа, поддержка HD-форматов."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 2,
+    "fields": {
+      "product": 1,
+      "version": "pro",
+      "price": "39.99",
+      "features": "Расширенные функции, эффекты, поддержка 4K."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 3,
+    "fields": {
+      "product": 2,
+      "version": "basic",
+      "price": "14.99",
+      "features": "Основной монтаж и экспорт в MP4."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 4,
+    "fields": {
+      "product": 2,
+      "version": "premium",
+      "price": "44.99",
+      "features": "Профессиональные инструменты, интеграция с плагинами."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 5,
+    "fields": {
+      "product": 3,
+      "version": "basic",
+      "price": "9.99",
+      "features": "Защита в реальном времени, обновления антивирусных баз."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 6,
+    "fields": {
+      "product": 3,
+      "version": "pro",
+      "price": "24.99",
+      "features": "Родительский контроль, антиспам, защита веб-камеры."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 7,
+    "fields": {
+      "product": 4,
+      "version": "basic",
+      "price": "4.99",
+      "features": "Поддержка синтаксиса, автосохранение."
+    }
+  },
+  {
+    "model": "products.productvariant",
+    "pk": 8,
+    "fields": {
+      "product": 4,
+      "version": "pro",
+      "price": "14.99",
+      "features": "Режим проектов, мощный поиск, плагины."
+    }
+  }
+]

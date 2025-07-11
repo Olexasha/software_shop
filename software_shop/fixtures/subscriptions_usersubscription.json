@@ -1,0 +1,22 @@
+[
+  {
+    "model": "subscriptions.usersubscription",
+    "pk": 1,
+    "fields": {
+      "user": 2,
+      "tariff": 2,
+      "start_date": "2025-07-01T10:00:00Z",
+      "end_date": "2025-08-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "subscriptions.usersubscription",
+    "pk": 2,
+    "fields": {
+      "user": 3,
+      "tariff": 3,
+      "start_date": "2025-01-15T09:00:00Z",
+      "end_date": "2026-01-15T09:00:00Z"
+    }
+  }
+]

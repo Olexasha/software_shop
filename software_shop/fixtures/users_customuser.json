@@ -1,0 +1,42 @@
+[
+  {
+    "model": "users.customuser",
+    "pk": 1,
+    "fields": {
+      "username": "sanea",
+      "password": "pbkdf2_sha256$1000000$IYZYq6ikuT4EiPZt0aBq4w$r0n+bu9s+gOmxXRoaoHiYrJGYKlEAahLSkoKlCVW5M8=",
+      "email": "sanea@mail.ru",
+      "phone": "+79870875988"
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 2,
+    "fields": {
+      "username": "ivan",
+      "password": "pbkdf2_sha256$1000000$IYZYq6ikuT4EiPZt0aBq4w$r0n+bu9s+gOmxXRoaoHiYrJGYKlEAahLSkoKlCVW5M8=",
+      "email": "ivan@mail.ru",
+      "phone": "+79990001122"
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 3,
+    "fields": {
+      "username": "olga",
+      "password": "pbkdf2_sha256$1000000$IYZYq6ikuT4EiPZt0aBq4w$r0n+bu9s+gOmxXRoaoHiYrJGYKlEAahLSkoKlCVW5M8=",
+      "email": "olga@mail.ru",
+      "phone": "+79990003344"
+    }
+  },
+  {
+    "model": "users.customuser",
+    "pk": 4,
+    "fields": {
+      "username": "kek",
+      "password": "pbkdf2_sha256$1000000$IYZYq6ikuT4EiPZt0aBq4w$r0n+bu9s+gOmxXRoaoHiYrJGYKlEAahLSkoKlCVW5M8=",
+      "email": "kek@mail.ru",
+      "phone": "+79990005566"
+    }
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "model": "products.purchase",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "variant": 1,
+      "purchase_date": "2025-07-01T10:00:00Z"
+    }
+  },
+  {
+    "model": "products.purchase",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "variant": 3,
+      "purchase_date": "2025-07-02T12:30:00Z"
+    }
+  },
+  {
+    "model": "products.purchase",
+    "pk": 3,
+    "fields": {
+      "user": 2,
+      "variant": 5,
+      "purchase_date": "2025-07-02T15:45:00Z"
+    }
+  },
+  {
+    "model": "products.purchase",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "variant": 7,
+      "purchase_date": "2025-07-03T09:15:00Z"
+    }
+  },
+  {
+    "model": "products.purchase",
+    "pk": 5,
+    "fields": {
+      "user": 3,
+      "variant": 8,
+      "purchase_date": "2025-07-03T13:00:00Z"
+    }
+  },
+  {
+    "model": "products.purchase",
+    "pk": 6,
+    "fields": {
+      "user": 3,
+      "variant": 1,
+      "purchase_date": "2025-07-03T16:30:00Z"
+    }
+  }
+]
