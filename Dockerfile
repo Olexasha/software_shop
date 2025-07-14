@@ -5,9 +5,7 @@ RUN apk update && apk add --no-cache \
     postgresql-client \
     build-base \
     postgresql-dev \
-    libpq \
-    curl \
-    nano
+    libpq
 
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install --upgrade pip && \

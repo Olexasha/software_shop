@@ -93,7 +93,6 @@ services:
       DB_NAME: postgres
       DB_USER: postgres
       DB_PASSWORD: postgres
-      TG_BOT_TOKEN: <tg_bot_token>
       PYTHONPATH: /software_shop:/software_shop/software_shop
     volumes:
       - ./:/software_shop

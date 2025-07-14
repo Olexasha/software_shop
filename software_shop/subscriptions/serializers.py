@@ -1,3 +1,5 @@
+import datetime
+
 from rest_framework import serializers
 from subscriptions.models import Tariff, UserSubscription
 
@@ -36,3 +38,12 @@ class UserSubscriptionSerializer(serializers.ModelSerializer):
         model = UserSubscription
         fields = "__all__"
         read_only_fields = ["user", "start_date", "end_date"]
+
+    def validate(self, data):
+        if UserSubscription.objects.filter(
+            user=data["user"], end_date__gt=datetime.datetime.now()
+        ):
+            return serializers.ValidationError(
+                "У вас ещё действует активная подписка, вы пока не можете оформить новую."
+            )
+        return data

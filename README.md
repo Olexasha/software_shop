@@ -37,7 +37,7 @@ cd software_shop
 ```
 
 ### 2. Переменные окружения
-#### В docker-compose.yml укажите переменные окружения, главное токен вашего бота: `TG_BOT_TOKEN`
+#### В корне проекта создайте файл .env. Там укажите переменные `SECRET_KEY` и `TG_BOT_TOKEN`. Либо пробрасывайте через docker-compose.yml переменные окружения.
 
 ### 3. Запуск через Docker Compose
 Убедитесь, что установлены Docker и Docker Compose.
@@ -81,7 +81,6 @@ docker-compose up -d
     │   ├── apps.py
     │   ├── __init__.py
     │   ├── migrations
-    │   │   
     │   ├── models.py
     │   ├── permissions.py
     │   ├── serializers.py
@@ -99,7 +98,6 @@ docker-compose up -d
     │   ├── apps.py
     │   ├── __init__.py
     │   ├── migrations
-    │   │   ├── __init__.py
     │   ├── models.py
     │   ├── serializers.py
     │   ├── urls.py

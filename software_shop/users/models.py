@@ -3,11 +3,9 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    phone = models.CharField(
-        max_length=20, null=True, blank=True, verbose_name="Телефон"
-    )
+    phone = models.CharField(max_length=20, blank=True, verbose_name="Телефон")
     tg_username = models.CharField(
-        max_length=50, null=True, blank=True, verbose_name="Telegram"
+        max_length=50, blank=True, verbose_name="Telegram"
     )
     tg_chat_id = models.BigIntegerField(
         null=True, blank=True, verbose_name="ID чата"
